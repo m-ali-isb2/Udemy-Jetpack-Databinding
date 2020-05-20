@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.room.viewModel
+package com.muhammadali.udemy.jetpack.databinding.viewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

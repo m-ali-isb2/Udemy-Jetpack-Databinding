@@ -1,10 +1,9 @@
-package com.muhammadali.udemy.jetpack.room.viewModel
+package com.muhammadali.udemy.jetpack.databinding.viewModel
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.muhammadali.udemy.jetpack.room.model.DogBreed
-import com.muhammadali.udemy.jetpack.room.model.DogDatabase
+import com.muhammadali.udemy.jetpack.databinding.model.DogBreed
+import com.muhammadali.udemy.jetpack.databinding.model.DogDatabase
 import kotlinx.coroutines.launch
 
 /**

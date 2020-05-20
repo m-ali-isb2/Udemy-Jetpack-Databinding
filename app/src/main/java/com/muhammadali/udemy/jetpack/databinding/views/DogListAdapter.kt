@@ -1,14 +1,14 @@
-package com.muhammadali.udemy.jetpack.room.views
+package com.muhammadali.udemy.jetpack.databinding.views
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.muhammadali.udemy.jetpack.room.R
-import com.muhammadali.udemy.jetpack.room.model.DogBreed
-import com.muhammadali.udemy.jetpack.room.utils.getProgressDrawable
-import com.muhammadali.udemy.jetpack.room.utils.loadImage
+import com.muhammadali.udemy.jetpack.databinding.R
+import com.muhammadali.udemy.jetpack.databinding.model.DogBreed
+import com.muhammadali.udemy.jetpack.databinding.utils.getProgressDrawable
+import com.muhammadali.udemy.jetpack.databinding.utils.loadImage
 import kotlinx.android.synthetic.main.item_dog.view.*
 
 /**

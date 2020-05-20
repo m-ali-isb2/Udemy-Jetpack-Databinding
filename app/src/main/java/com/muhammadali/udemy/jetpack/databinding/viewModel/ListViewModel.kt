@@ -1,14 +1,13 @@
-package com.muhammadali.udemy.jetpack.room.viewModel
+package com.muhammadali.udemy.jetpack.databinding.viewModel
 
 import android.app.Application
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.muhammadali.udemy.jetpack.room.model.DogBreed
-import com.muhammadali.udemy.jetpack.room.model.DogDao
-import com.muhammadali.udemy.jetpack.room.model.DogDatabase
-import com.muhammadali.udemy.jetpack.room.model.DogsService
-import com.muhammadali.udemy.jetpack.room.utils.SharePreferencesHelper
+import com.muhammadali.udemy.jetpack.databinding.model.DogBreed
+import com.muhammadali.udemy.jetpack.databinding.model.DogDao
+import com.muhammadali.udemy.jetpack.databinding.model.DogDatabase
+import com.muhammadali.udemy.jetpack.databinding.model.DogsService
+import com.muhammadali.udemy.jetpack.databinding.utils.SharePreferencesHelper
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver

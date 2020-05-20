@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.room.model
+package com.muhammadali.udemy.jetpack.databinding.model
 
 import io.reactivex.Single
 import retrofit2.Retrofit

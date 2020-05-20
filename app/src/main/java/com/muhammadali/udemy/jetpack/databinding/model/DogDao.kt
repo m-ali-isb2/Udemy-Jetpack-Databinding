@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.room.model
+package com.muhammadali.udemy.jetpack.databinding.model
 
 import androidx.room.Dao
 import androidx.room.Insert

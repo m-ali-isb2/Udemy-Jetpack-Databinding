@@ -1,11 +1,9 @@
-package com.muhammadali.udemy.jetpack.room.utils
+package com.muhammadali.udemy.jetpack.databinding.utils
 
-import android.app.backup.SharedPreferencesBackupHelper
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
 import androidx.preference.PreferenceManager
-import com.muhammadali.udemy.jetpack.room.model.DogDatabase
 
 /**
  * Created by Muhammad Ali on 19-May-20.

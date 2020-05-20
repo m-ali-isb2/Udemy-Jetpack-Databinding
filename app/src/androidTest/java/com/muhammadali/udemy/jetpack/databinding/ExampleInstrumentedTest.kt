@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.room
+package com.muhammadali.udemy.jetpack.databinding
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

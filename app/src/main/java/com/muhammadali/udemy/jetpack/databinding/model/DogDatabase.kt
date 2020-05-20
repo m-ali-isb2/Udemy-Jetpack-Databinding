@@ -1,11 +1,9 @@
-package com.muhammadali.udemy.jetpack.room.model
+package com.muhammadali.udemy.jetpack.databinding.model
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.internal.synchronized
 
 /**
  * Created by Muhammad Ali on 17-May-20.

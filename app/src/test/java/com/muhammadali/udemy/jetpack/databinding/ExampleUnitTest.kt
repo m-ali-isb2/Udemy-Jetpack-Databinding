@@ -1,4 +1,4 @@
-package com.muhammadali.udemy.jetpack.room
+package com.muhammadali.udemy.jetpack.databinding
 
 import org.junit.Test
 

@@ -1,8 +1,7 @@
-package com.muhammadali.udemy.jetpack.room.model
+package com.muhammadali.udemy.jetpack.databinding.model
 
 import io.reactivex.Single
 import retrofit2.http.GET
-import retrofit2.http.Url
 
 /**
  * Created by Muhammad Ali on 05-May-20.

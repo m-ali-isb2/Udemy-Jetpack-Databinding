@@ -1,11 +1,11 @@
-package com.muhammadali.udemy.jetpack.room.utils
+package com.muhammadali.udemy.jetpack.databinding.utils
 
 import android.content.Context
 import android.widget.ImageView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.muhammadali.udemy.jetpack.room.R
+import com.muhammadali.udemy.jetpack.databinding.R
 
 /**
  * Created by Muhammad Ali on 05-May-20.

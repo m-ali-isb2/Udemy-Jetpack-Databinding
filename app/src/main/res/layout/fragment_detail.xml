@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.muhammadali.udemy.jetpack.room.views.DetailFragment">
+        tools:context="com.muhammadali.udemy.jetpack.databinding.views.DetailFragment">
 
         <!-- TODO: Update blank fragment layout -->
 
