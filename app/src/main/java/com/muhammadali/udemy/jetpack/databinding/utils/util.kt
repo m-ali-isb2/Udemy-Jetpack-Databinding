@@ -2,10 +2,12 @@ package com.muhammadali.udemy.jetpack.databinding.utils
 
 import android.content.Context
 import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.muhammadali.udemy.jetpack.databinding.R
+
 
 /**
  * Created by Muhammad Ali on 05-May-20.
@@ -28,4 +30,9 @@ fun ImageView.loadImage(url: String?, progressDrawable: CircularProgressDrawable
         .setDefaultRequestOptions(options)
         .load(url)
         .into(this)
+}
+
+@BindingAdapter("android:imageUrl")
+fun loadImage(view: ImageView, url: String) {
+    view.loadImage(url, getProgressDrawable(view.context))
 }

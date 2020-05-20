@@ -4,6 +4,10 @@
 
     <data>
 
+        <variable
+            name="dog"
+            type="com.muhammadali.udemy.jetpack.databinding.model.DogBreed" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,9 +18,9 @@
             android:id="@+id/icon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:imageUrl='@{dog !=null ? dog.image : "" }'
             android:minHeight="200dp"
             android:scaleType="fitCenter"
-            android:src="@mipmap/ic_dog"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="name"
+            android:text='@{dog !=null ? dog.breed : "Name"}'
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/icon" />
@@ -38,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="body"
+            android:text='@{dog !=null ? dog.breedGroup : "purpose"}'
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name" />
@@ -49,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="body"
+            android:text='@{dog !=null ? dog.temperament : "temprament"}'
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/purpose" />
@@ -60,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:text="body"
+            android:text='@{dog !=null ? dog.lifespan : "Lifespan"}'
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/temperament" />

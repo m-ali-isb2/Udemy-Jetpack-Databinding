@@ -19,14 +19,14 @@ abstract class DogDatabase : RoomDatabase() {
         private var lock = Any()
 
 
-        operator fun invoke(context: Context) = instance ?: kotlin.synchronized(lock) {
+        operator fun invoke(context: Context) = instance ?: synchronized(lock) {
             instance ?: buildDatabase(context).also {
                 instance = it
             }
         }
 
         private fun buildDatabase(context: Context) =
-            Room.databaseBuilder(context.applicationContext, DogDatabase::class.java, "DogDatabase")
+            Room.databaseBuilder(context.applicationContext, DogDatabase::class.java, "DogDatabase2")
                 .build()
     }
 }
