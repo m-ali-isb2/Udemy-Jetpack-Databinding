@@ -7,6 +7,7 @@ import com.muhammadali.udemy.jetpack.databinding.model.DogBreed
 import com.muhammadali.udemy.jetpack.databinding.model.DogDao
 import com.muhammadali.udemy.jetpack.databinding.model.DogDatabase
 import com.muhammadali.udemy.jetpack.databinding.model.DogsService
+import com.muhammadali.udemy.jetpack.databinding.utils.NotificationHelper
 import com.muhammadali.udemy.jetpack.databinding.utils.SharePreferencesHelper
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -65,6 +66,7 @@ class ListViewModel(application: Application) : BaseViewModel(application) {
                         storeLocally(t)
                         Toast.makeText(getApplication(), "Retrived from Server", Toast.LENGTH_SHORT)
                             .show()
+                        NotificationHelper(getApplication()).createNotification()
                     }
 
                     override fun onError(e: Throwable) {
