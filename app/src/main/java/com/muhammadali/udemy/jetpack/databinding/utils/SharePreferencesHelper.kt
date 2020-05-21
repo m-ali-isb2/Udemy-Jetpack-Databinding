@@ -12,7 +12,7 @@ import androidx.preference.PreferenceManager
 class SharePreferencesHelper {
 
     companion object {
-        private const val PREFS_TIME="prefs_time"
+        private const val PREFS_TIME = "prefs_time"
         private var prefs: SharedPreferences? = null
 
         @Volatile
@@ -33,11 +33,13 @@ class SharePreferencesHelper {
         }
     }
 
-    fun updateTime(time:Long){
+    fun updateTime(time: Long) {
         prefs?.edit(commit = true) {
-            putLong(PREFS_TIME,time)
+            putLong(PREFS_TIME, time)
         }
     }
 
-    fun getTime() = prefs?.getLong(PREFS_TIME,0L)
+    fun getTime() = prefs?.getLong(PREFS_TIME, 0L)
+
+    fun getCachePreferences() = prefs?.getString("duration", "")
 }

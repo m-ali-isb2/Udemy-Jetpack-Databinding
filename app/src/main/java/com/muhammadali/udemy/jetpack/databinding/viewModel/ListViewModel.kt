@@ -14,6 +14,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.launch
+import java.lang.NumberFormatException
 
 /**
  * Created by Muhammad Ali on 04-May-20.
@@ -22,7 +23,7 @@ import kotlinx.coroutines.launch
 class ListViewModel(application: Application) : BaseViewModel(application) {
 
     private val prefsHelper = SharePreferencesHelper(getApplication())
-    private val refreshTime = 2 * 60 * 1000 * 1000 * 1000L
+    private var refreshTime = 2 * 60 * 1000 * 1000 * 1000L
 
     private val dogsService = DogsService()
     private val disposable = CompositeDisposable()
@@ -33,11 +34,23 @@ class ListViewModel(application: Application) : BaseViewModel(application) {
     val loading = MutableLiveData<Boolean>()
 
     fun refresh() {
+
+        checkCacheDuration()
         val updateTime = prefsHelper.getTime()
         if (updateTime != null && updateTime != 0L && System.nanoTime() - updateTime < refreshTime) {
             fetchFromDatabase()
         } else {
             fetchFromRemote()
+        }
+    }
+
+    fun checkCacheDuration() {
+        val cacheNumer = prefsHelper.getCachePreferences()
+        try {
+            val cacheNumberInt = cacheNumer?.toInt() ?: 5 * 60
+            refreshTime = cacheNumberInt.times(1000 * 1000 * 1000L)
+        } catch (e: NumberFormatException) {
+            e.printStackTrace()
         }
     }
 

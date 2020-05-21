@@ -30,7 +30,7 @@ class DetailViewModel(application: Application) : BaseViewModel(application) {
         launch {
 //            val dao = DogDatabase(getApplication()).dogDao()
             var dogb = dao.getDog(uuid!!)
-            dogb?.let {
+            dogb.let {
                 setDogDetails(it)
             }
         }
