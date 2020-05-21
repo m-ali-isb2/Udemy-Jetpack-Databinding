@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 class ListViewModel(application: Application) : BaseViewModel(application) {
 
     private val prefsHelper = SharePreferencesHelper(getApplication())
-    private val refreshTime = 10 * 1000 * 1000 * 1000L
+    private val refreshTime = 2 * 60 * 1000 * 1000 * 1000L
 
     private val dogsService = DogsService()
     private val disposable = CompositeDisposable()
@@ -87,14 +87,10 @@ class ListViewModel(application: Application) : BaseViewModel(application) {
         launch {
 
             val dao: DogDao = DogDatabase(getApplication()).dogDao()
-            dao.deleteAllDogs()
+//            dao.deleteAllDogs()
             val insertResult = dao.insertAll(*t.toTypedArray())
-            var i = 0
-            while (i < t.size) {
-                t[i].uuid = insertResult[i].toInt()
-                i++
-            }
-            dogsRetrieve(t)
+            fetchFromDatabase()
+//            dogsRetrieve(fetchFromDatabase())
         }
         prefsHelper.updateTime(System.nanoTime())
     }

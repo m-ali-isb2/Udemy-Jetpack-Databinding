@@ -21,15 +21,18 @@ class DetailViewModel(application: Application) : BaseViewModel(application) {
         fetchFromDatabase()
     }
 
-    private fun setDogDetails(dogBreed: DogBreed) {
+    fun setDogDetails(dogBreed: DogBreed) {
         dogObj.value = dogBreed
     }
 
     private fun fetchFromDatabase() {
 //        val dao = DogDatabase(getApplication()).dogDao()
         launch {
-            val dao = DogDatabase(getApplication()).dogDao()
-            setDogDetails(dao.getDog(uuid!!.toInt()))
+//            val dao = DogDatabase(getApplication()).dogDao()
+            var dogb = DogDatabase(getApplication()).dogDao().getDog(uuid!!.toInt())
+            dogb?.let {
+                setDogDetails(it)
+            }
         }
     }
 }

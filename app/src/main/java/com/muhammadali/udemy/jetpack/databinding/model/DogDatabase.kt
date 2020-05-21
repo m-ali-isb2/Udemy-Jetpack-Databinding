@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase
  * Created by Muhammad Ali on 17-May-20.
  * Email muhammad.ali9385@gmail.com
  */
-@Database(entities = arrayOf(DogBreed::class), version = 1)
+@Database(entities = [DogBreed::class], version = 1)
 abstract class DogDatabase : RoomDatabase() {
     abstract fun dogDao(): DogDao
 

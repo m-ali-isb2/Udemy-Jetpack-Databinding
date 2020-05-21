@@ -10,13 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.muhammadali.udemy.jetpack.databinding.R
 import com.muhammadali.udemy.jetpack.databinding.databinding.DetailLayoutBinding
-import com.muhammadali.udemy.jetpack.databinding.utils.getProgressDrawable
-import com.muhammadali.udemy.jetpack.databinding.utils.loadImage
 import com.muhammadali.udemy.jetpack.databinding.viewModel.DetailViewModel
-import kotlinx.android.synthetic.main.detail_layout.*
-import kotlinx.android.synthetic.main.detail_layout.body
-import kotlinx.android.synthetic.main.detail_layout.name
-
 
 /**
  * A simple [Fragment] subclass.
@@ -41,11 +35,12 @@ class DetailFragment : Fragment() {
         //retrieving Argument
         arguments?.let {
             uuid = DetailFragmentArgs.fromBundle(it).uuid
-        }
-        viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
-        viewModel.setDetails(uuid)
+            viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
+            viewModel.setDetails(uuid)
 //        view.dog
-        observeDetails()
+            observeDetails()
+        }
+
     }
 
     fun observeDetails() {
