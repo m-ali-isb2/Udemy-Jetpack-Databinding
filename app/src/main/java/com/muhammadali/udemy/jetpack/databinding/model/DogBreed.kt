@@ -12,8 +12,9 @@ import com.google.gson.annotations.SerializedName
  */
 @Entity
 data class DogBreed(
+    @PrimaryKey(autoGenerate = false)
     @SerializedName("id")
-    val id: String? = null,
+    val id: String = "",
     @SerializedName("name")
     val breed: String? = null,
     @SerializedName("life_span")
@@ -26,7 +27,7 @@ data class DogBreed(
     val image: String? = null
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readString(),
+        parcel.readString()!!,
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -36,8 +37,6 @@ data class DogBreed(
 
     }
 
-    @PrimaryKey(autoGenerate = true)
-    var uuid: Int = 0
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(id)
@@ -62,3 +61,5 @@ data class DogBreed(
         }
     }
 }
+
+data class DogPalette(val color: Int)

@@ -21,7 +21,7 @@
             app:destination="@id/listFragment" />
         <argument
             android:name="uuid"
-            app:argType="long" />
+            app:argType="string" />
 
     </fragment>
 </navigation>

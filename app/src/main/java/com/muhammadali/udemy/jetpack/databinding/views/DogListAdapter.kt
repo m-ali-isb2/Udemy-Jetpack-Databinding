@@ -62,7 +62,7 @@ class DogListAdapter(val dogBreedList: ArrayList<DogBreed>) :
 
     override fun onClick(view :View,dogBreed: DogBreed) {
         val action =
-            ListFragmentDirections.actionListFragmentToDetailFragment(dogBreed.id!!.toLong())
+            ListFragmentDirections.actionListFragmentToDetailFragment(dogBreed.id!!)
         Navigation.findNavController(view)
             .navigate(action)
     }

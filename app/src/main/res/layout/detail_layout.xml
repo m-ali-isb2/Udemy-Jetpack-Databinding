@@ -8,11 +8,16 @@
             name="dog"
             type="com.muhammadali.udemy.jetpack.databinding.model.DogBreed" />
 
+        <variable
+            name="palette"
+            type="com.muhammadali.udemy.jetpack.databinding.model.DogPalette" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@{palette.color}">
 
         <ImageView
             android:id="@+id/icon"

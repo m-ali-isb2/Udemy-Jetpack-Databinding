@@ -14,9 +14,9 @@ class DetailViewModel(application: Application) : BaseViewModel(application) {
 
 
     val dogObj = MutableLiveData<DogBreed>()
-    private var uuid: Long? = null
+    private var uuid: String? = null
 
-    fun setDetails(uuid: Long) {
+    fun setDetails(uuid: String) {
         this.uuid = uuid
         fetchFromDatabase()
     }
@@ -26,10 +26,10 @@ class DetailViewModel(application: Application) : BaseViewModel(application) {
     }
 
     private fun fetchFromDatabase() {
-//        val dao = DogDatabase(getApplication()).dogDao()
+        val dao = DogDatabase(getApplication()).dogDao()
         launch {
 //            val dao = DogDatabase(getApplication()).dogDao()
-            var dogb = DogDatabase(getApplication()).dogDao().getDog(uuid!!.toInt())
+            var dogb = dao.getDog(uuid!!)
             dogb?.let {
                 setDogDetails(it)
             }
