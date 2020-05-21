@@ -14,6 +14,8 @@ import com.muhammadali.udemy.jetpack.databinding.R
  * Email muhammad.ali9385@gmail.com
  */
 
+val REQUEST_CODE_SEND_SMS = 2324
+
 fun getProgressDrawable(context: Context): CircularProgressDrawable {
     return CircularProgressDrawable(context).apply {
         strokeWidth = 10f
