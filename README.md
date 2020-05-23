@@ -1,6 +1,6 @@
 # Udemy-Jetpack-Databinding
 
-#Steps to Clone Repo
+# Steps to Clone Repo
 
 1.	Remove previous git remote from VCS
 2.	Refactor/ rename the package
